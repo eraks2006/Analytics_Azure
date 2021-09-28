@@ -42,7 +42,7 @@ def wtp():
     model = AutoReg(train, lags=1)
     model_fit = model.fit()
     
-    #prediction
+    #prediction with difference
     differenced = model_fit.predict(start=len(train), end=len(train) + out -1 , dynamic=False).reshape(-1,1)
     
     # Function to invert differenced value
@@ -64,3 +64,4 @@ def wtp():
 if __name__ == '__main__':
     # run web server
     app.run()
+    
