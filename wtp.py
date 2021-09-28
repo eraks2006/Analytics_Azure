@@ -61,6 +61,6 @@ def wtp():
     response = json.dumps(inv_y.tolist())
     return(response)
 
-#if __name__ == '__main__':
+if __name__ == '__main__':
     # run web server
-#    app.run()
+    app.run()
